@@ -1,0 +1,19 @@
+body {
+  font-family: "HankenGrotesk";
+  background-color: darkgrey;
+}
+
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
