@@ -1,15 +1,15 @@
-document.querySelector(".circle").addEventListener("click", function () {
-  let count = 0;
-  const spinTimes = 3;
+const circle = document.querySelector(".circle");
+const button = document.querySelector(".button");
+let totalSpins = 0;
 
-  function spin() {
-    count++;
-    this.style.transform = `rotate(${360 * count}deg)`;
+function spinCircle() {
+  const spinTimes = 10;
+  const spinsToAdd = spinTimes * 360;
+  totalSpins += spinsToAdd;
 
-    if (count < spinTimes) {
-      requestAnimationFrame(spin.bind(this));
-    }
-  }
+  circle.style.transition = "transform 3s ease-in-out";
+  circle.style.transform = `rotate(${totalSpins}deg)`;
+}
 
-  spin.call(this);
-});
+circle.addEventListener("click", spinCircle);
+button.addEventListener("click", spinCircle);
