@@ -28,6 +28,7 @@ body {
   border-radius: 20px;
   padding: 25px;
   text-align: center;
+  z-index: 2;
 }
 
 .result {
@@ -48,6 +49,7 @@ body {
   border-radius: 50%;
   align-content: center;
   cursor: pointer;
+  transition: transform 4s ease-in-out;
 }
 
 .large {
@@ -76,6 +78,8 @@ p {
   max-width: 200px;
   border-radius: 20px;
   padding: 30px;
+  margin-left: -15px;
+  padding-right: 20px;
 }
 
 .container2 div {
@@ -141,6 +145,7 @@ img {
   color: white;
   max-width: 9rem;
   text-align: center;
+  padding-top: px;
 }
 
 .container2 div.button:hover {
@@ -160,4 +165,34 @@ img {
 
 .attribution a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+body{
+  display: block;
+}
+
+  .header {
+    display: block;
+  }
+
+  .container1 {
+    margin-top: -20px;
+    position: relative;
+    padding: 35px;
+    z-index: 4;
+    margin-left: -15px;
+  }
+
+  .container2 {
+    background-color: #333;
+    padding-right: 3px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+  }
+
+  .attribution{
+    text-align: center
+  };
 }
