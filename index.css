@@ -170,6 +170,8 @@ img {
 @media (max-width: 500px) {
 body{
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
   .header {
