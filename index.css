@@ -145,7 +145,6 @@ img {
   color: white;
   max-width: 9rem;
   text-align: center;
-  padding-top: px;
 }
 
 .container2 div.button:hover {
@@ -184,8 +183,9 @@ img {
     padding: 35px;
     padding-bottom: 25px;
     z-index: 4;
-    margin:auto;
+    margin: auto;
     margin-top: -20px;
+    max-width: 200px;
   }
 
   .container2 {
@@ -194,5 +194,15 @@ img {
     padding-bottom: 10px;
     margin: auto;
     margin-top: -30px;
+    max-width: 300px;
+  }
+
+  .container2 div {
+    width: 200px;
+  }
+
+  .container2 div.button{
+    justify-self: center;
+    margin-left: -2rem;
   }
 }

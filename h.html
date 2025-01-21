@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/icon-memory.svg"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Results Summary Component</title>
+    <style>
+      /* Fonts and Base Styles */
+      @font-face {
+        font-family: "HankenGrotesk";
+        src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+      }
+      body {
+        font-family: "HankenGrotesk", sans-serif;
+        background-color: hsl(221, 100%, 96%);
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .header {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      /* Container 1 Styling */
+      .container1 {
+        background: linear-gradient(
+          to bottom,
+          hsl(252, 100%, 67%),
+          hsl(241, 81%, 54%)
+        );
+        color: hsl(241, 100%, 89%);
+        max-width: 200px;
+        border-radius: 20px;
+        padding: 25px;
+        text-align: center;
+      }
+      .result {
+        font-size: 1rem;
+        font-weight: 800;
+        margin: 0;
+      }
+      .circle {
+        width: 120px;
+        height: 120px;
+        margin: 10px auto;
+        background: linear-gradient(
+          to bottom,
+          hsla(256, 72%, 46%, 1),
+          hsla(241, 72%, 46%, 0)
+        );
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+      }
+      .circle:hover {
+        transform: scale(1.1);
+      }
+      .large {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: white;
+      }
+      .tiny {
+        font-size: 0.9rem;
+        color: hsl(241, 100%, 89%);
+      }
+      .great {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+      /* Container 2 Styling */
+      .container2 {
+        background-color: white;
+        max-width: 250px;
+        border-radius: 20px;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .container2 div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 0.9rem;
+        margin: 10px 0;
+      }
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      .label {
+        font-weight: 500;
+        margin-right: auto;
+      }
+      .score {
+        font-weight: 600;
+      }
+      .score span {
+        color: #888;
+      }
+      /* Colors for summary items */
+      .red {
+        background-color: #fff7f6;
+        color: hsl(0, 100%, 67%);
+      }
+      .yellow {
+        background-color: rgb(255, 255, 238);
+        color: hsl(39, 100%, 56%);
+      }
+      .green {
+        background-color: rgb(246, 255, 246);
+        color: hsl(166, 100%, 37%);
+      }
+      .blue {
+        background-color: rgb(246, 252, 253);
+        color: hsl(234, 85%, 45%);
+      }
+      /* Button Styles */
+      .button {
+        display: block;
+        background-color: hsl(224, 30%, 27%);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+      }
+      .button:hover {
+        background-color: hsl(224, 40%, 37%);
+      }
+      /* Attribution Styling */
+      .attribution {
+        font-size: 0.8rem;
+        text-align: center;
+        margin-top: 20px;
+        color: hsl(228, 12%, 44%);
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+      }
+      .attribution a:hover {
+        text-decoration: underline;
+      }
+      /* Responsive Design */
+      @media (max-width: 500px) {
+        .header {
+          flex-direction: column;
+          align-items: center;
+        }
+        .container1,
+        .container2 {
+          max-width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <div class="container1">
+          <p class="result">Your Result</p>
+          <div class="circle">
+            <h1 class="large">76</h1>
+          </div>
+          <p class="great">Great</p>
+          <p>
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+        <div class="container2">
+          <h3>Summary</h3>
+          <div class="red">
+            <span class="label">Reaction</span>
+            <span class="score">80 <span>/ 100</span></span>
+          </div>
+          <div class="yellow">
+            <span class="label">Memory</span>
+            <span class="score">92 <span>/ 100</span></span>
+          </div>
+          <div class="green">
+            <span class="label">Verbal</span>
+            <span class="score">61 <span>/ 100</span></span>
+          </div>
+          <div class="blue">
+            <span class="label">Visual</span>
+            <span class="score">72 <span>/ 100</span></span>
+          </div>
+          <div class="button">Continue</div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/Vinnykells15"
+          >Vinnykells</a
+        >.
+      </div>
+    </main>
+  </body>
+</html>
